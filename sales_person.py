@@ -12,19 +12,19 @@ class SalesPerson:
 
     def sell_product(self, product):
         print(f'Selling {product.name}')
-        self.product_sold.append(product)
+        self.products_sold.append(product)
 
     def display_sales(self):
         print('---------------------------------------------------')
         print('Product Sold: ')
-        for product in self.product_sold:
+        for product in self.products_sold:
             print(product)
         print('---------------------------------------------------')
 
     def calculate_sales(self):
         total = 0
 
-        for product in self.product_sold:
+        for product in self.products_sold:
             total += product.price
 
         self.total_sales = total
